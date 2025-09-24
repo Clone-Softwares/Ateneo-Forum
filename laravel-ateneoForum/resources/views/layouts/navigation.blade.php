@@ -19,7 +19,7 @@
             </div>
 
             <div class="flex">
-                <a href="/test" class="flex items-center">
+                <a href="/post" class="flex items-center">
                     <x-primary-button>
                         Create Post
                     </x-primary-button>
