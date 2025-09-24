@@ -22,8 +22,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'verification_status',
-        'role',
     ];
 
     /**
@@ -48,19 +46,4 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
-
-
-    // Add relationships between the models
-
-    public function posts(){
-        $this->hasMany(Post::class);
-    }
-
-    public function comments(){
-        $this->hasMany(Comment::class);
-    }
-
-
-
 }
