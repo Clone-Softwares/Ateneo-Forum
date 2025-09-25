@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
-    public function create (){
 
-
-
+    public function index (){
+        $posts = Post::with('user')->orderBy('created_at', 'desc')->get();
+        return view('dashboard', compact('posts'));
     }
 
     public function store (Request $request){

@@ -8,9 +8,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
+
+Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -25,5 +28,5 @@ Route::get('/post', function (){
     return view('post');
 });
 
-
+Route::get('RequestPost', [PostController::class,'index'] )->name('post.fetch');
 Route::post('CreatePost', [PostController::class, 'store'])->name('post.store');

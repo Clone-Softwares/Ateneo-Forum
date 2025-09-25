@@ -13,7 +13,8 @@
 
             <div class="max-w-full ">
                 <x-grid>
-                    <div
+
+                    {{-- <div
                         class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                         <a href="#">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
@@ -30,13 +31,13 @@
                                     stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                             </svg>
                         </a>
-                    </div>
+                    </div> --}}
 
-                    <x-post />
-                    <x-post />
-                    <x-post />
-                    <x-post />
-                    <x-post />
+
+                    @foreach ($posts as $post)
+                        <x-post :title="$post->title" :author="$post->user->name" :dateCreated="$post->created_at" :content="$post->content"/>
+                    @endforeach
+
                 </x-grid>
 
             </div>
