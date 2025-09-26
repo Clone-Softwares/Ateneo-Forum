@@ -4,9 +4,16 @@
 
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mb-5">
                 <div class="p-6 text-gray-900">
-                    <h1>
-                        You can see me
-                    </h1>
+
+                            @if(Auth::user())
+
+                               <p> Welcome back {{ Auth::user()->name }} </p>
+
+                            @else
+                                <p>Welcome to the Atenean Forum. Register/Login to participate</p>
+
+                            @endif
+
                 </div>
             </div>
 

@@ -1,6 +1,6 @@
 @props(['author' => 'jose', 'title' => 'noli mi tangere', 'content'=>'touch me not', 'dateCreated' => 'n/a'])
 
-<div class="border border-gray-900   px-3 py-5 rounded flex flex-col justify-between ">
+<div class="border border-gray-900  px-3 py-5 rounded flex flex-col justify-between ">
     <div>
         <h1 class="text-2xl">
             {{ $title }}
@@ -11,8 +11,10 @@
          <p class="text-sm mb-10">
                 {{ $dateCreated }}
         </p>
+
         <p>
-        {{ $content }}
+            {{ Str::limit($content, 150) }}
+            {{-- {{ $content }} --}}
         </p>
     </div>
 

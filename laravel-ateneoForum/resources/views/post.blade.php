@@ -5,7 +5,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mb-5">
                 <div class="p-6 text-gray-900">
                     <h1>
-                        Welcome back {{ Auth::user()->name }}
+                        What will you share this time {{ Auth::user()->name }}?
                     </h1>
                 </div>
             </div>
