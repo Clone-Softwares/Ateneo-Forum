@@ -1,8 +1,0 @@
-
-Initialize the project
-    composer install
-    Php artisan breeze:install
-    npm install
-
-    Then create a database.sqlite file inside the database directory
-    then php artisan migrate
