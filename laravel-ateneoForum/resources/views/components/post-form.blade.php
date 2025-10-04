@@ -1,6 +1,14 @@
 
 <div class="w-full flex justify-center">
-    <div class=" flex items-center max-w-2xl w-1/2 py-5 bg-white rounded-md min-h-lg border border-black" >
+    <div class=" flex flex-col items-end max-w-2xl w-1/2 py-5 px-5 bg-white rounded-md min-h-lg border border-black" >
+
+        <form  action="{{ route('dashboard') }}" >
+            <x-button className="mr-10" >
+                        Go back
+            </x-button>
+        </form>
+
+
         <form action="{{ route('post.store') }}" class="flex flex-col px-3 py-1 w-full p-10" method="POST" >
            @csrf
 
